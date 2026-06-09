@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Parottasalna Flash Cards</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header-top">
+                <div class="logo">Flash Cards // Parottasalna</div>
+                <div id="breadcrumb" class="breadcrumb"></div>
+            </div>
+            <h1 id="page-title">Loading Hub...</h1>
+        </header>
+
+        <main>
+            <div id="course-view" class="view-state active grid"></div>
+
+            <div id="chapter-view" class="view-state grid"></div>
+
+            <div
+                id="flashcard-view"
+                class="view-state flashcard-view-container"
+            >
+                <div class="perspective-wrapper">
+                    <div
+                        id="main-card"
+                        class="flashcard"
+                        onclick="toggleFlip()"
+                    >
+                        <div id="card-front" class="card-face card-front"></div>
+                        <div id="card-back" class="card-face card-back"></div>
+                    </div>
+                </div>
+
+                <div class="controls-panel">
+                    <button id="prev-btn" onclick="previousCard()">
+                        ← Back
+                    </button>
+                    <span id="card-counter" class="counter-badge">0 / 0</span>
+                    <button id="next-btn" onclick="nextCard()">Next →</button>
+                </div>
+            </div>
+        </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>

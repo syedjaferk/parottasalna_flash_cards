@@ -1,0 +1,111 @@
+{
+  "courses": [
+    {
+      "id": "aws-cloud-models-infrastructure",
+      "title": "AWS Cloud Models & Global Infrastructure",
+      "description": "Master the core cloud service models (IaaS, PaaS, SaaS) and deeply understand the physical architecture of AWS Regions and Availability Zones.",
+      "chapters": [
+        {
+          "id": "ch-cloud-service-models",
+          "title": "Cloud Service Models (IaaS, PaaS, SaaS)",
+          "cards": [
+            {
+              "front": "What is Infrastructure as a Service (IaaS)?",
+              "back": "A cloud service model that provides the basic building blocks for cloud IT, including access to networking features, computers, and data storage space. It gives you the highest level of flexibility and management control over your IT resources."
+            },
+            {
+              "front": "What is Platform as a Service (PaaS)?",
+              "back": "A cloud model that removes the need to manage the underlying infrastructure (like hardware and operating systems), allowing you to focus entirely on the deployment and management of your applications."
+            },
+            {
+              "front": "What is Software as a Service (SaaS)?",
+              "back": "A cloud model that provides a complete, finished product that is run and managed entirely by the service provider, such as web-based email."
+            },
+            {
+              "front": "Scenario: A startup wants to deploy a web application quickly but does not want to manage operating system patching, capacity planning, or server maintenance. Which cloud model should they use?",
+              "back": "Platform as a Service (PaaS)."
+            },
+            {
+              "front": "Scenario: A company needs complete administrative control over their virtual server's guest operating system, firewall configurations, and installed applications. Which cloud service model fits best?",
+              "back": "Infrastructure as a Service (IaaS)."
+            },
+            {
+              "front": "Scenario: An organization adopts a web-based email application for its employees. The provider manages all new feature additions, infrastructure, and maintenance. What model is this?",
+              "back": "Software as a Service (SaaS)."
+            },
+            {
+              "front": "In the IaaS model, what is the customer responsible for managing under the Shared Responsibility Model?",
+              "back": "The customer is responsible for managing the guest operating system (including updates and security patches), any application software, data, and the configuration of the AWS-provided firewall (security groups)."
+            },
+            {
+              "front": "How does Platform as a Service (PaaS) increase developer efficiency?",
+              "back": "It frees developers from the 'undifferentiated heavy lifting' of resource procurement, capacity planning, and software maintenance, allowing them to focus solely on their applications."
+            },
+            {
+              "front": "Which AWS service is a classic example of Infrastructure as a Service (IaaS)?",
+              "back": "Amazon Elastic Compute Cloud (Amazon EC2)."
+            },
+            {
+              "front": "Which AWS service represents a Platform as a Service (PaaS) offering for relational databases?",
+              "back": "Amazon Relational Database Service (Amazon RDS)."
+            }
+          ]
+        },
+        {
+          "id": "ch-regions-availability-zones",
+          "title": "AWS Regions & Availability Zones",
+          "cards": [
+            {
+              "front": "What is an AWS Region?",
+              "back": "An AWS Region is a separate, physical geographic area in the world where AWS operates its infrastructure and clusters its data centers."
+            },
+            {
+              "front": "What is an Availability Zone (AZ)?",
+              "back": "An Availability Zone is one or more discrete data centers with independent and redundant power, cooling, and networking located within an AWS Region."
+            },
+            {
+              "front": "How are Availability Zones connected within a Region?",
+              "back": "They are interconnected through high-bandwidth, low-latency, highly-redundant networking over dedicated metro fiber."
+            },
+            {
+              "front": "Why are Availability Zones physically separated within a Region?",
+              "back": "To prevent correlated failures and protect applications from a 'shared-fate scenario' like local power outages, lightning strikes, fires, or natural disasters."
+            },
+            {
+              "front": "Scenario: Your company must comply with strict data residency laws requiring all European user data to physically remain within Europe. How do you ensure this in AWS?",
+              "back": "Deploy all your AWS resources and data exclusively within a European AWS Region, such as Europe (Frankfurt)."
+            },
+            {
+              "front": "Scenario: You are deploying a mission-critical application and want to ensure it survives a data center power outage. What architectural best practice should you apply?",
+              "back": "Deploy the application across multiple Availability Zones within the same AWS Region."
+            },
+            {
+              "front": "Scenario: Your primary user base is located in India, but your application servers are currently deployed in the US East (N. Virginia) region, causing slow loading times. How do you fix this?",
+              "back": "Migrate or deploy your application in the Asia Pacific (Mumbai) Region to reduce network delay and improve speed for your users."
+            },
+            {
+              "front": "Are AWS Regions completely isolated from one another?",
+              "back": "Yes, each Region is designed to be isolated from the other Regions to achieve the greatest possible fault tolerance and stability."
+            },
+            {
+              "front": "What is the physical distance between Availability Zones in a single Region, and why does it matter?",
+              "back": "They are physically separated by a meaningful distance (up to ~100 km or 60 miles) to provide disaster isolation, while remaining close enough to support synchronous data replication with single-digit millisecond latency."
+            },
+            {
+              "front": "Scenario: A beginner developer assumes that an Availability Zone is simply a logical grouping of servers within a single massive building. Are they correct?",
+              "back": "No, an Availability Zone is physical. It consists of one or more discrete, physically separate data centers housed in separate facilities."
+            },
+            {
+              "front": "Does AWS automatically replicate your regional resources (like EC2 instances) across multiple AWS Regions?",
+              "back": "No, regional resources are specific to the Region where they are created. You can replicate some types of resources across Regions, but AWS does not do it automatically."
+            },
+            {
+              "front": "Scenario: You launch an EC2 instance in a single Availability Zone. A severe flood destroys that specific data center. What happens to your instance?",
+              "back": "Because the instance is hosted in a single AZ, it represents a single point of failure and will be affected by the disaster, making your instance unavailable."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
